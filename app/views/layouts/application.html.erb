@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="switchableGrid">
+<head>
+  <title>InstAngular</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-controller="SwitchableGridController">
+
+<div class="jumbotron bottom">
+  <h1>Welcome to InstAngular</h1>
+  <p>Code was manipulated from a tutorial provided by <em>Martin Angelov</em> and can be <a class="btn btn-primary" role="button" target="_blank" href="http://tutorialzine.com/2013/08/learn-angularjs-5-examples/">Found Here.</a></p>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
