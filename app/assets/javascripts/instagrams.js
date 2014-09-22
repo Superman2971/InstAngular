@@ -1,5 +1,5 @@
 // Define a new module. We declare a dependency on the ngResource module, so we can work with the Instagram API
-var app = angular.module('switchableGrid', ['ngResource', 'ngRoute']);
+var app = angular.module('switchableGrid', ['ngResource']);
 
 // Create and register the new "instagram" service
 app.factory('instagram',['$resource', function($resource){
