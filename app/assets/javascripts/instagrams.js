@@ -1,6 +1,12 @@
 // Define a new module. We declare a dependency on the ngResource module, so we can work with the Instagram API
 var app = angular.module('switchableGrid', ['ngResource']);
 
+// Hoping this will fix my injector problem
+app.config(['$resourceProvider', function ($resourceProvider) {
+  // Don't strip trailing slashes from calculated URLs
+  $resourceProvider.defaults.stripTrailingSlashes = false;
+}]);
+
 // Create and register the new "instagram" service
 app.factory('instagram', function($resource){
 
