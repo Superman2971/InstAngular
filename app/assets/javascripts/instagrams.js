@@ -2,7 +2,7 @@
 var app = angular.module('switchableGrid', ['ngResource']);
 
 // Create and register the new "instagram" service
-app.factory('instagram',['$resource', function($resource){
+app.service('instagram',['$resource', function($resource){
 
   return {
     fetchPopular: function(callback){
