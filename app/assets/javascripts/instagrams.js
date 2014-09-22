@@ -1,5 +1,5 @@
 // Define a new module. We declare a dependency on the ngResource module, so we can work with the Instagram API
-var app = angular.module('switchableGrid', ['ngResource']);
+var app = angular.module('switchableGrid', ['ngResource', 'ngRoute']);
 
 // Create and register the new "instagram" service
 app.factory('instagram',['$resource', function($resource){
@@ -28,7 +28,7 @@ app.factory('instagram',['$resource', function($resource){
 
 }]);
 
-app.controller("SwitchableGridController",["$scope","instagram",function($scope,instagram){
+app.controller("SwitchableGridController",["$scope", "instagram",function($scope, instagram){
   $scope.pics = [];
 
   // Use the instagram service and fetch a list of the popular pics
